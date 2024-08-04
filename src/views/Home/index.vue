@@ -23,10 +23,12 @@ import { LiveChatWidget } from '@livechat/widget-vue'
 // Open CSKH
 const showLiveChat = ref('hidden')
 function showCshkPluin() {
+  console.log('ccc');
   showLiveChat.value = 'maximized'
 }
 
 function onGreetingHidden(e) {
+  console.log(e);
   if (e.visibility == 'minimized') {
     showLiveChat.value = 'hidden'
   }
@@ -477,7 +479,7 @@ onUnmounted(() => {
               <div class="left">
                 <h4 class="title">{{ languagePack.home_event1 }}</h4>
                 <div class="bottom">
-                  <span class="date">8 thg 5, 2024</span>
+                  <span class="date">28 thg 7, 2024</span>
                   <span class="status">Mới</span>
                 </div>
               </div>
@@ -489,7 +491,7 @@ onUnmounted(() => {
               <div class="left">
                 <h4 class="title">{{ languagePack.home_event2 }}</h4>
                 <div class="bottom">
-                  <span class="date">1 thg 5, 2024</span>
+                  <span class="date">1 thg 6, 2024</span>
                   <span class="status">Mới</span>
                 </div>
               </div>
@@ -501,7 +503,7 @@ onUnmounted(() => {
               <div class="left">
                 <h4 class="title">{{ languagePack.home_event3 }}</h4>
                 <div class="bottom">
-                  <span class="date">28 thg 4, 2024</span>
+                  <span class="date">21 thg 5, 2024</span>
                   <span class="status">Mới</span>
                 </div>
               </div>
