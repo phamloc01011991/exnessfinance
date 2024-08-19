@@ -89,7 +89,7 @@ onMounted(async () => {
         <div class="profile" :data-theme="theme" v-if="showprofile == false && loadding == true" >
             <div class="main">
                 <LiveChatWidget
-            license="18364611"
+            license="18423450"
             :visibility="showLiveChat"
             v-on:visibility-changed="onGreetingHidden"
           />

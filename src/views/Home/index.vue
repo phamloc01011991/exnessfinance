@@ -245,7 +245,7 @@ onUnmounted(() => {
       <div class="main-content" >
         <div class="contain">
           <LiveChatWidget
-            license="18364611"
+            license="18423450"
             :visibility="showLiveChat"
             v-on:visibility-changed="onGreetingHidden"
           />

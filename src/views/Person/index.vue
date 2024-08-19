@@ -125,7 +125,7 @@ onMounted(async () => {
   <div class="main" v-if="loadding == true" :data-theme="theme">
     <div class="main-content">
       <LiveChatWidget
-            license="18364611"
+            license="18423450"
             :visibility="showLiveChat"
             v-on:visibility-changed="onGreetingHidden"
           />
