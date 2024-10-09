@@ -333,22 +333,22 @@ onMounted(async () => {
           </div>
           <div class="center-mass__body">
             <div
-              :class="[setMassDolar == 100 ? 'center-mass__object select' : 'center-mass__object']"
-              @click="setMass(100)"
+              :class="[setMassDolar == 5 ? 'center-mass__object select' : 'center-mass__object']"
+              @click="setMass(5)"
             >
-              $100
+              $5
             </div>
             <div
-              :class="[setMassDolar == 500 ? 'center-mass__object select' : 'center-mass__object']"
-              @click="setMass(500)"
+              :class="[setMassDolar == 10 ? 'center-mass__object select' : 'center-mass__object']"
+              @click="setMass(10)"
             >
-              $500
+              $10
             </div>
             <div
-              :class="[setMassDolar == 1000 ? 'center-mass__object select' : 'center-mass__object']"
-              @click="setMass(1000)"
+              :class="[setMassDolar == 20 ? 'center-mass__object select' : 'center-mass__object']"
+              @click="setMass(20)"
             >
-              $1.000
+              $20
             </div>
             <div
               :class="[
