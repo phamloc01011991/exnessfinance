@@ -78,7 +78,7 @@ onUnmounted(()=>{
             <div :class="[array.data.change2 > 0 ? 'pdown' : 'pup']">{{ parseFloat(array.data.value).toFixed(5) }}</div>
             <div class="usd-change">{{ parseFloat(array.data.value).toFixed(5) }}$</div>
         </div>
-        <div class="percent" style="width:32%"><button :class="[array.data.change2 > 0 ? 'btns btn-success' : 'btns btn-error']">{{ array.data.change2 }}%</button></div>
+        <div class="percent" style="width:32%"><button :class="[array.data.change2 > 0 ? 'btns btn-success' : 'btns btn-error']">{{ parseFloat(array.data.change2).toFixed(2)}}%</button></div>
     </RouterLink>
 </template>
 <style scoped>
