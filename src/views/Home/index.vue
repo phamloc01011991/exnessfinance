@@ -65,6 +65,7 @@ const checkLogin = store.getters.usersss
 const isShowInvite = ref(false)
 const showBonus = ref(false)
 const showVip = ref(false)
+const coinCrypto = ref('')
 // function toggleBalance() {
 //   hiddenBalance.value = !hiddenBalance.value
 // }
@@ -72,6 +73,14 @@ async function getFarmingAmount() {
   await request.get('/staking').then((res) => {
     if (res.data.success === true) {
       farmingAmount.value = res.data.data.balance_hold_total;
+    }
+  })
+}
+
+async function getCoinCrypto() {
+  await request.get('/crypto').then((res) => {
+    if (res.data.success === true) {
+      coinCrypto.value = res.data.data;
     }
   })
 }
@@ -226,6 +235,7 @@ onMounted(async () => {
   await loadCheck()
   onLoadIcon()
   getPriceUSD()
+  getCoinCrypto()
 
 
  
@@ -376,7 +386,13 @@ onUnmounted(() => {
                   {{ languagePack.market_item_tile3 }}
                 </div>
               </div>
+ 
               <div>
+                <Item 
+                    :name="(coinCrypto[0].symbol + 'usd')" 
+                    :data="{change1: coinCrypto[0].price_change_percentage_24h, change2: coinCrypto[0].price_change_percentage_24h, hi: coinCrypto[0].current_price, lastdaily: coinCrypto[0].current_price, lo: coinCrypto[0].current_price, value: coinCrypto[0].current_price}"
+                    :vitri="index"
+                />
                 <template v-if="isWeekend == false">
                   <template v-for="(item, index) in symbols.data" :key="index">
                       <Item v-if="item.status == '1'"
