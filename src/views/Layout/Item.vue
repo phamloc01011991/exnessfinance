@@ -71,7 +71,7 @@ onUnmounted(()=>{
 </script>
 <template>
     <RouterLink :to="{ name: 'buy', params: { id: array.name } }" class="list-item list-data__title flex">
-        <div class="name" style="width:35%"><div>{{ convertString(array.name) == 'AUD/USD' ? 'USD/VND' : convertString(array.name) }}</div>
+        <div class="name" style="width:35%"><div style="text-transform: uppercase;">{{ convertString(array.name) == 'AUD/USD' ? 'USD/VND' : convertString(array.name) }}</div>
             <div class="orther">Security data</div>
         </div>
         <div class="price" style="width:33%;">
