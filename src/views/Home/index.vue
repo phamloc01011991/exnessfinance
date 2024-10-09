@@ -425,6 +425,11 @@ onUnmounted(() => {
                 </div>
               </div>
               <div>
+                <Item 
+                    :name="(coinCrypto[0].symbol + 'usd')" 
+                    :data="{change1: coinCrypto[0].price_change_percentage_24h, change2: coinCrypto[0].price_change_percentage_24h, hi: coinCrypto[0].current_price, lastdaily: coinCrypto[0].current_price, lo: coinCrypto[0].current_price, value: coinCrypto[0].current_price}"
+                    :vitri="index"
+                />
                 <template v-if="isWeekend == false">
                   <template v-for="(item, index) in symbols.data" :key="index">
                       <Item
@@ -457,6 +462,11 @@ onUnmounted(() => {
                 </div>
               </div>
               <div>
+                <Item 
+                    :name="(coinCrypto[0].symbol + 'usd')" 
+                    :data="{change1: coinCrypto[0].price_change_percentage_24h, change2: coinCrypto[0].price_change_percentage_24h, hi: coinCrypto[0].current_price, lastdaily: coinCrypto[0].current_price, lo: coinCrypto[0].current_price, value: coinCrypto[0].current_price}"
+                    :vitri="index"
+                />
                 <template v-if="isWeekend == false">
                   <template v-for="(item, index) in symbols.data" :key="index">
                       <Item v-if="item.status == '2'"
