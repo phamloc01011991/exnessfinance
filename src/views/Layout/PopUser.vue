@@ -10,7 +10,7 @@ const phone = ref('')
 const password = ref('')
 const passwordconfirm = ref('')
 const transferCode = ref('')
-const invitedCode = ref('A1B2C3D')
+const invitedCode = ref('')
 const loging = ref(false)
 const signuping = ref(false)
 const emailFotgot = ref('')
@@ -274,7 +274,13 @@ onMounted(() => {
             <i class='bx bx-code f-icon' ></i>
           </div>
         </div>
- 
+        <div class="form-input pass" >
+          <div class="form-control " >
+            <input :placeholder="languagePack.popuser_invitecode" type="text" v-model="invitedCode" autocomplete="off" readonly v-if="checkInviteCode" style="text-transform: uppercase;"/>
+            <input :placeholder="languagePack.popuser_invitecode" type="text" v-model="invitedCode" autocomplete="off" v-if="!checkInviteCode"/>
+            <i class='bx bx-user-plus f-icon' ></i>
+          </div>
+        </div>
         <div class="dk">
           <p>
             {{ languagePack.popuser_dk_register1 }} <span>{{ languagePack.popuser_dk_register2 }} Exness</span>
