@@ -390,11 +390,11 @@ onUnmounted(() => {
               </div>
  
               <div>
-                <ItemCrypto 
+                <!-- <ItemCrypto 
                     :name="(coinCrypto[0].symbol + 'usdt')" 
                     :data="{change1: coinCrypto[0].price_change_percentage_24h, change2: coinCrypto[0].price_change_percentage_24h, hi: coinCrypto[0].current_price, lastdaily: coinCrypto[0].current_price, lo: coinCrypto[0].current_price, value: coinCrypto[0].current_price}"
                     :vitri="coinCrypto[0].id"
-                />
+                /> -->
                 <template v-if="isWeekend == false">
                   <template v-for="(item, index) in symbols.data" :key="index">
                       <Item v-if="item.status == '1'"
@@ -427,11 +427,7 @@ onUnmounted(() => {
                 </div>
               </div>
               <div>
-                <ItemCrypto 
-                    :name="(coinCrypto[0].symbol + 'usd')" 
-                    :data="{change1: coinCrypto[0].price_change_percentage_24h, change2: coinCrypto[0].price_change_percentage_24h, hi: coinCrypto[0].current_price, lastdaily: coinCrypto[0].current_price, lo: coinCrypto[0].current_price, value: coinCrypto[0].current_price}"
-                    :vitri="coinCrypto[0].id"
-                />
+      
                 <template v-if="isWeekend == false">
                   <template v-for="(item, index) in symbols.data" :key="index">
                       <Item
@@ -464,11 +460,7 @@ onUnmounted(() => {
                 </div>
               </div>
               <div>
-                <ItemCrypto 
-                    :name="(coinCrypto[0].symbol + 'usd')" 
-                    :data="{change1: coinCrypto[0].price_change_percentage_24h, change2: coinCrypto[0].price_change_percentage_24h, hi: coinCrypto[0].current_price, lastdaily: coinCrypto[0].current_price, lo: coinCrypto[0].current_price, value: coinCrypto[0].current_price}"
-                    :vitri="coinCrypto[0].id"
-                />
+
                 <template v-if="isWeekend == false">
                   <template v-for="(item, index) in symbols.data" :key="index">
                       <Item v-if="item.status == '2'"
