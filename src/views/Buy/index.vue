@@ -6,7 +6,7 @@ import { RouterLink, useRouter } from 'vue-router'
 import request from '../../utils/request'
 import loadApp from '../Layout/LoadApp.vue'
 import store from '../../stores/index'
-const coinDefaul = ref('AUDCAD')
+const coinDefaul = ref('BTCUSD')
 const router = useRouter()
 const symbols = ref('')
 const loadding = ref(false)
@@ -221,6 +221,9 @@ onMounted(async () => {
           <div class="left">
             <i class="bx bx-menu"></i>
             <select class="select" @change="changeForex" v-model="selectForex">
+              <option  value="BTCUSD">
+                BTC/USD
+              </option>
               <option v-for="(item, index) in symbols" :value="item.symbol" :key="index">
                 {{ item.symbol == 'AUDUSD' ? 'USD/VND' : convertString(item.symbol) }}
               </option>
