@@ -26,6 +26,7 @@ const showLiveChat = ref('hidden')
 function showCshkPluin() {
   console.log('ccc');
   showLiveChat.value = 'maximized'
+  console.log(showLiveChat.value);
 }
 
 function onGreetingHidden(e) {
@@ -233,7 +234,7 @@ onBeforeMount(() => {
 });
 onMounted(async () => {
   getFarmingAmount()
-  await getCoinCrypto()
+
   await loadCheck()
   onLoadIcon()
   getPriceUSD()
